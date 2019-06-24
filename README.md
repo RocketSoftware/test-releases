@@ -131,11 +131,11 @@ Open Web Launch is available for Windows, macOS and Linux.
 Both versions are installed by default (`openweblaunch32.exe` and `openweblaunch64.exe`).
 Based on the JVM selected, the setup will make the 32 or 64-bit version of Open Web Launch the default. 
 
-####What happens if a JNLP file on the host changes?
+#### What happens if a JNLP file on the host changes?
 
 Open Web Launch will check for changes between remote and local JNLP files and refresh where needed.
 
-####How does Open Web Launch determine the Java it should use
+#### How does Open Web Launch determine the Java it should use
 
 This is the order by which Open Web Launch determines what Java executable it will use to run a Java Web Start application:
 
