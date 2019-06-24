@@ -188,10 +188,10 @@ If none of the other options result in a Java version that it can use, Open Web 
 
 [https://docs.oracle.com/javase/tutorial/uiswing/examples/misc/index.html](https://docs.oracle.com/javase/tutorial/uiswing/examples/misc/index.html)
 
-#### Chrome Extension
+#### Chrome Extension (beta)
 
 [https://chrome.google.com/webstore/detail/open-web-launch/pmmlhpkdpbddohdbnjinopbkmlcnjnhc](https://chrome.google.com/webstore/detail/open-web-launch/pmmlhpkdpbddohdbnjinopbkmlcnjnhc)
 
-#### Firefox Add-on
+#### Firefox Add-on (beta)
 
 [https://addons.mozilla.org/en-US/firefox/addon/open-web-launch/](https://addons.mozilla.org/en-US/firefox/addon/open-web-launch/)
