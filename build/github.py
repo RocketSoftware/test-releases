@@ -6,20 +6,34 @@ import glob
 print ("Uploading artifascts to github")
 
 parser = argparse.ArgumentParser(description='Upload artifacts to github')
-parser.add_argument('-version', 
+optional = parser._action_groups.pop() # Edited this line
+required = parser.add_argument_group('required arguments')
+required.add_argument('-v', '--version', 
                     dest='version',
                     default='1.2.3.4',
-                    help='Version of this release')
-parser.add_argument('-artefacts', 
+                    help='Version of this release', 
+                    required=True
+                    )
+required.add_argument('-f', '--artefacts', 
                     dest='filespec',
                     default='',
-                    help='Artefacts that are to be uploaded')
-parser.add_argument('--final', 
+                    help='Artefacts that are to be uploaded', 
+                    required=True)
+required.add_argument('-u', '--username', 
+                    dest='username',
+                    help='Username for github', 
+                    required=True)
+required.add_argument('-p', '--password', 
+                    dest='password',
+                    help='Password for github', 
+                    required=True)
+optional.add_argument('--final', 
                     dest='prerelease',
                     action='store_const',
                     const=False,
                     default=True,
                     help='Specify if release is final')
+parser._action_groups.append(optional) # added this line
 
 args = parser.parse_args()
 
@@ -29,8 +43,8 @@ prerelease = args.prerelease
 github_organization = 'RocketSoftware'
 github_repository = 'test-releases'
 github_release_id = '18297749'
-github_user = 'hrensink'
-github_password = 'R0cket1!'
+github_user = args.username
+github_password = args.password
 uploads_url = 'https://uploads.github.com'
 api_url = 'https://api.github.com'
 
